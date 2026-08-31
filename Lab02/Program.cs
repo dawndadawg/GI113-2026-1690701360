@@ -42,7 +42,9 @@ namespace Lab02
             Console.WriteLine($"HP: {currentHp}/{maxHp}");
             hpPercent = currentHp * 100 / maxHp;
             Console.WriteLine($"HP Percent: {hpPercent}%");
+            Console.WriteLine();
 
+            Console.WriteLine($"BOSS HAS SUMMON IT'S FRIENDS\n");
             //Part B Lab02
             string bossName1 = "Silver";
             char rank1 = 'B';
