@@ -49,15 +49,6 @@ namespace Lab04
             Console.WriteLine($"Save name: {saveName}");
             Console.WriteLine($"Valid input: {slotOk}");
             Console.WriteLine($"Slot: {slot}");
-
-            Console.WriteLine("\n+---------------------------+");
-            Console.WriteLine("|      RATE THIS LEVEL      |");
-            Console.WriteLine("+---------------------------+");
-
-            Console.Write("Rate this level (0.0-5.0): ");
-            bool rateOk = double.TryParse(Console.ReadLine(), out double rating);
-            Console.WriteLine($"Valid input: {rateOk}");
-            Console.WriteLine($"Rating: {rating}");
         }
     }
 }
