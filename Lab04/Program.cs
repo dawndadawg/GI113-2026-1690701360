@@ -11,7 +11,7 @@ namespace Lab04
     internal class Program
     {
         static void Main(string[] args)
-        {
+        { 
             Console.WriteLine("\n+-------------------------------+");
             Console.WriteLine("|      CHARACTER CREATION       |");
             Console.WriteLine("+-------------------------------+");
@@ -22,7 +22,7 @@ namespace Lab04
             Console.Write("Starting luck (0.0-10.0): ");
             bool luckOk = double.TryParse(Console.ReadLine(), out double luck);
             Console.WriteLine($"{charName} the Class-{classNum} adventurer enters the dungeon. Luck: {luck}");
-
+            
             Console.WriteLine("\n+-------------------------------+");
             Console.WriteLine("|           ITEM SHOP           |");
             Console.WriteLine("+-------------------------------+");
@@ -30,7 +30,7 @@ namespace Lab04
             bool quantityOk = int.TryParse(Console.ReadLine(), out int quantity);
             Console.WriteLine($"Valid input: {quantityOk}");
             Console.WriteLine($"Quantity: {quantity}");
-
+            
             Console.WriteLine("\n+-------------------------------+");
             Console.WriteLine("|          SET VOLUME           |");
             Console.WriteLine("+-------------------------------+");
@@ -38,7 +38,7 @@ namespace Lab04
             bool volumeOk = double.TryParse(Console.ReadLine(), out double volume);
             Console.WriteLine($"Valid input: {volumeOk}");
             Console.WriteLine($"Volume: {volume}");
-
+            
             Console.WriteLine("\n+-------------------------------+");
             Console.WriteLine("|         NEW SAVE FILE         |");
             Console.WriteLine("+-------------------------------+");
