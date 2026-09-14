@@ -35,7 +35,7 @@ namespace Lab05
             Console.WriteLine($"[Hero]    HP:{heroHp} ATK:{heroAttack} DEF:{heroDefense}");
             Console.WriteLine($"[Monster] HP:{monsterHp} ATK:{monsterAttack} DEF:{monsterDefense}\n");
 
-            int potionHeal = 8;
+            int potionHeal = 14;
             heroHp += potionHeal;
             Console.WriteLine($"Hero drinks a potion, healing {potionHeal}. Hero HP is now {heroHp}.\n");
 
