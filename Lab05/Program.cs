@@ -57,27 +57,6 @@ namespace Lab05
             int criticalDamage = normalDamage + Convert.ToInt32(isCritical) * normalDamage;
             Console.WriteLine($"Critical hit roll: {roll} (critical: {isCritical})");
             Console.WriteLine($"If critical, Normal Attack would instead deal: {criticalDamage} damage");
-
-            bool heroHitsHarder = heroAttack > monsterAttack;
-            bool canOneShotWithNormal = normalDamage >= monsterHp;
-            bool monsterCanOneShotHero = counterDamage >= heroHp;
-            bool safeTrade = normalDamage > counterDamage && !monsterCanOneShotHero;
-            bool luckyOrLethal = isCritical || canOneShotWithNormal;
-            Console.WriteLine($"Hero hits harder than Monster: {heroHitsHarder}");
-            Console.WriteLine($"Normal Attack can defeat Monster in one hit: {canOneShotWithNormal}");
-            Console.WriteLine($"Monster could defeat Hero in one hit back: {monsterCanOneShotHero}");
-            Console.WriteLine($"This is a safe trade for Hero: {safeTrade}");
-            Console.WriteLine($"This attack is lucky or lethal: {luckyOrLethal}");
-
-            // Hero commits to the Normal Attack (compound assignment: -=)
-            monsterHp -= normalDamage;
-            Console.WriteLine($"Hero attacks! Monster HP: {monsterHp}/{monsterMaxHp}");
-
-            // Result + reward
-            bool monsterDefeated = monsterHp <= 0;
-            int goldEarned = (monsterMaxHp - monsterHp) * 2;
-            Console.WriteLine($"Monster defeated: {monsterDefeated}");
-            Console.WriteLine($"Gold earned: {goldEarned}");
         }
     }
 }
