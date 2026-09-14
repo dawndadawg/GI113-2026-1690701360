@@ -48,7 +48,7 @@ namespace Lab05
             int counterDamage = Math.Max(0, monsterAttack - heroDefense);
             Console.WriteLine($"If Monster counters afterward, it would deal: {counterDamage} damage\n");
 
-            Random rng = new Random(14);
+            Random rng = new Random();
             int roll = rng.Next(1, 101);
             bool isCritical = roll <= 10;
             int criticalDamage = normalDamage + Convert.ToInt32(isCritical) * normalDamage;
