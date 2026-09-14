@@ -21,7 +21,8 @@ namespace Lab05
             bool heroAttackOk = int.TryParse(Console.ReadLine(), out int heroAttack);
             Console.Write("Hero Defense: ");
             bool heroDefenseOk = int.TryParse(Console.ReadLine(), out int heroDefense);
-            Console.Write("Monster HP: ");
+
+            Console.Write("\nMonster HP: ");
             bool monsterHpOk = int.TryParse(Console.ReadLine(), out int monsterHp);
             Console.Write("Monster Attack: ");
             bool monsterAttackOk = int.TryParse(Console.ReadLine(), out int monsterAttack);
