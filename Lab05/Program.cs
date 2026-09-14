@@ -12,8 +12,8 @@ namespace Lab05
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("=== BATTLE DAMAGE CALCULATOR ===");
-            Console.WriteLine("Hero vs Monster -- scouting the fight before it happens");
+            Console.WriteLine("=== >> Hunter Monster << ===");
+            Console.WriteLine("Hero vs Monster -- Calculate Damage\n");
 
             Console.Write("Hero HP: ");
             bool heroHpOk = int.TryParse(Console.ReadLine(), out int heroHp);
@@ -28,28 +28,24 @@ namespace Lab05
             Console.Write("Monster Defense: ");
             bool monsterDefenseOk = int.TryParse(Console.ReadLine(), out int monsterDefense);
             bool allStatsValid = heroHpOk && heroAttackOk && heroDefenseOk && monsterHpOk && monsterAttackOk && monsterDefenseOk;
-            Console.WriteLine($"All stats valid: {allStatsValid}");
+            Console.WriteLine($"All stats valid: {allStatsValid}\n");
 
             int monsterMaxHp = monsterHp;
             Console.WriteLine($"[Hero]    HP:{heroHp} ATK:{heroAttack} DEF:{heroDefense}");
-            Console.WriteLine($"[Monster] HP:{monsterHp} ATK:{monsterAttack} DEF:{monsterDefense}");
+            Console.WriteLine($"[Monster] HP:{monsterHp} ATK:{monsterAttack} DEF:{monsterDefense}\n");
 
-            // Before scouting: Hero drinks a potion (compound assignment: +=)
             int potionHeal = 8;
             heroHp += potionHeal;
-            Console.WriteLine($"Hero drinks a potion, healing {potionHeal}. Hero HP is now {heroHp}.");
+            Console.WriteLine($"Hero drinks a potion, healing {potionHeal}. Hero HP is now {heroHp}.\n");
 
-            // Damage preview 1: Normal Attack (arithmetic + Math -- the base pattern)
             int normalDamage = Math.Max(0, heroAttack - monsterDefense);
             Console.WriteLine($"Normal Attack would deal: {normalDamage} damage");
 
-            // Damage preview 2: Power Attack (precedence -- multiply before subtract)
             int powerDamage = Math.Max(0, heroAttack * 2 - monsterDefense);
             Console.WriteLine($"Power Attack would deal: {powerDamage} damage");
 
-            // Damage preview 3: what Monster would deal back, if it got a turn (same pattern, other side)
             int counterDamage = Math.Max(0, monsterAttack - heroDefense);
-            Console.WriteLine($"If Monster counters afterward, it would deal: {counterDamage} damage");
+            Console.WriteLine($"If Monster counters afterward, it would deal: {counterDamage} damage\n");
 
             Random rng = new Random(14);
             int roll = rng.Next(1, 101);
