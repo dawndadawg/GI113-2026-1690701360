@@ -17,7 +17,7 @@ namespace Lab06
 
             Console.WriteLine($"Your level (1-99): ");
             bool ok = int.TryParse(Console.ReadLine(), out int level);
-            bool hasKey = true;
+            bool hasKey = false;
 
             if (!ok || level < 1 || level > 99)
             {
@@ -29,7 +29,14 @@ namespace Lab06
             }
             else if (level >= 5)
             {
-                Console.WriteLine("the door opens.");
+                if (hasKey)
+                {
+                    Console.WriteLine("the door opens.");
+                }
+                else
+                {
+                    Console.WriteLine("locked. find a key.");
+                }
             }
             else
             {
