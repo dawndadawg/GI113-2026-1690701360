@@ -12,7 +12,29 @@ namespace Lab06
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            //Random rng = new Random();
+            //int level = rng.Next(1,21);
+
+            Console.WriteLine($"Your level (1-99): ");
+            bool ok = int.TryParse(Console.ReadLine(), out int level);
+            bool hasKey = true;
+
+            if (!ok || level < 1 || level > 99)
+            {
+                Console.WriteLine("Invalid level.");
+            }
+            else if (level >= 10 && hasKey)
+            {
+                Console.WriteLine("the door opens.\nthe boss awaits.");
+            }
+            else if (level >= 5)
+            {
+                Console.WriteLine("the door opens.");
+            }
+            else
+            {
+                Console.WriteLine("nothing happened.");
+            }
         }
     }
 }
